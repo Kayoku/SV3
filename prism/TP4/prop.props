@@ -1,0 +1,12 @@
+// Esperance
+R{1} =? [ I=T ]
+
+// Concentration toujours supérieur à 0
+P>=1 [G A_ >= 0]
+
+// Vitesse de dégradation >= 0
+P>=1 [G kdeg * A_ >= 0]
+
+// Vitesse tôt ou tard = 0.2
+P>=1 [F kdeg * A_ = 0.2]
+

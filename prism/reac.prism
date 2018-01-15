@@ -1,0 +1,19 @@
+// model type
+ctmc
+
+// constants
+const double kenz = 0.05;
+const double kdeg = 0.1;
+
+module Enzymatique
+    // var name   // range  // initial value
+    //X_:           [OFF..ON] init ON;
+    //Y_:           [OFF..ON] init OFF;
+    S_:		  [0..15] init 15;
+    E_:		  [0..15] init 2;
+    P_:		  [0..15] init 0;
+
+    // transition    guard          rate         how to obtain new state
+    // label            
+    []	            (S_ > 0) & (E_ > 0) & (P_ < 15) -> (kenz): (S_' = S_ - 1) & (P_' = P_ + 1);
+endmodule 
