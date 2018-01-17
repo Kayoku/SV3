@@ -4,10 +4,11 @@ ctmc
 // constants
 const double kdeg = 0.1;
 const double T;
+const int Ainit;
 
 module Degradation
     // var name   // range  // initial value
-    A_:           [0..50]   init 50;
+    A_:           [0..1000]   init Ainit;
 
     // transition    guard          rate         how to obtain new state
     // label            
